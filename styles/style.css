@@ -1,0 +1,101 @@
+:root {
+  --primary-color: #8e07fc;
+  --secondary-color: white;
+}
+
+body {
+  height: 100vh;
+  background: rgb(63, 215, 215);
+  background: linear-gradient(
+    90deg,
+    rgba(63, 215, 215, 1) 0%,
+    rgba(240, 235, 101, 1) 21%,
+    rgba(241, 170, 94, 1) 49%,
+    rgba(140, 232, 183, 1) 65%,
+    rgba(228, 70, 182, 1) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: auto;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+}
+.glass-card p {
+  color: black;
+}
+.navbar .collapse ul li a {
+  color: rgb(179, 103, 103) !;
+}
+.container .row {
+  min-height: 70vh;
+}
+/* Common */
+.navbar .collapse form a.btn {
+  border-radius: 1.2rem;
+  border: 1px var(--primary-color) solid;
+  color: var(--primary-color);
+}
+.navbar .collapse form a.btn:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* Glass Effects */
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(19px);
+}
+.glass-card {
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(19px);
+}
+/* image  */
+.col-md-6 img.round {
+  border-radius: 2rem;
+}
+.glass-card img {
+  border-radius: 0.3rem;
+  align-self: center;
+}
+.offcanvas-body a p i {
+  font-size: 2rem;
+}
+.offcanvas-body a {
+  font-size: 1.5rem;
+  vertical-align: center;
+  text-decoration: none;
+}
+
+.emolist{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.emolist li::before {
+  content: '👩‍💻 ';
+}
